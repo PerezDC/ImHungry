@@ -23,9 +23,8 @@ This web application was created throughout the Microsoft Software and Systems A
 ---
 
 ## Table of Contents
-- [X] Application Presentation | [Download Here](https://github.com/PerezDC/ImHungry1/blob/master/ImHungry%20Presentation.pptx)
 - [X] [Database Conceptual Design](#Entity-Relationship-Diagram) (ERD)
-- [X] Database Creation (SQL Scripts) | [See Here](https://github.com/PerezDC/ImHungry1/blob/master/ImHungryDatabase.sql)
+- [X] Database Creation (SQL Scripts) | [See Here](https://github.com/PerezDC/ImHungry/blob/master/ImHungryDBScript.sql)
 - [X] [UI/UX (Wire-frame sketches)](#Wire-frames)
 - [X] [User Stories](#User-Stories)
 - [X] [Use Cases](Use-Cases)
