@@ -2,6 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">I'm Hungry</h1>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a asp-action="Index" asp-controller="RegUsers">Login</a>
+            </div>
+            <div class="col">
+                <a asp-action="Index" asp-controller="Restaurants">Restaurants Nearby</a>
+            </div>
+        </div>
+    </div>
