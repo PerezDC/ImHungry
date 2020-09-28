@@ -19,10 +19,11 @@ USE ImHungryDB;
 DROP TABLE IF EXISTS RegUser;
 CREATE TABLE RegUser(
 	UserID INT IDENTITY NOT NULL,
-	UserPassword NVARCHAR NULL,
+	EmailAddress NVARCHAR (80) NOT NULL,
+	UserPassword NVARCHAR (80) NULL,
 	FirstName NVARCHAR (40) NULL,
 	LastName NVARCHAR (40) NULL,
-	SearchRadius INT,
+	SearchRadius INT NOT NULL,
 
 	CONSTRAINT PK_RegUser PRIMARY KEY CLUSTERED
 	( UserID )
@@ -105,14 +106,14 @@ CREATE TABLE VisitedRestaurant(
 		( RestID )
 );
 
-INSERT RegUser (FirstName, LastName, SearchRadius)
+INSERT RegUser (EmailAddress, FirstName, LastName, SearchRadius)
 VALUES
-	('David', 'Perez', 5),
-	('Hilda', 'Perez', 10),
-	('Michael', 'Lewis', 15),
-	('Travis', 'Ortiz', 5),
-	('Brian', 'Smith', 10),
-	('Jayme', 'Wright', 15);
+	('david@werehungry.com', 'David', 'Perez', 5),
+	('hilda@werehungry.com', 'Hilda', 'Perez', 10),
+	('michael@werehungry.com', 'Michael', 'Lewis', 15),
+	('travis@werehungry.com', 'Travis', 'Ortiz', 5),
+	('brian@werehungry.com', 'Brian', 'Smith', 10),
+	('jayme@werehungry.com', 'Jayme', 'Wright', 15);
 
 INSERT RestaurantCategories (CategoryName)
 VALUES
