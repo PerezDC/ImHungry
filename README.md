@@ -32,6 +32,7 @@ This web application was created throughout the Microsoft Software and Systems A
 - [X] [Requirements List](#Requirements-List)
 - [X] [Test Table](#Test-Table)
 - [X] [Prototype](#Prototype)
+- [ ] Create Project Board
 
 ---
 ## Entity Relationship Diagram
