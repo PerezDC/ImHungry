@@ -1,7 +1,14 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Landing Page";
 }
 
-<h1>Index</h1>
-
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a asp-action="Index" asp-controller="RegUsers">Registered Users</a>
+        </div>
+        <div class="col">
+            <a asp-action="Index" asp-controller="Restaurants">Restaurants Nearby</a>
+        </div>
+    </div>
+</div>
