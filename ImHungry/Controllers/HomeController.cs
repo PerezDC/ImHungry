@@ -12,5 +12,11 @@ namespace ImHungry.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ViewResult LoginForm()
+        {
+            return View();
+        }
     }
 }
