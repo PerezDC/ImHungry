@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\LibSassHost.Native.win-x64.1.3.2\build\LibSassHost.Native.win-x64.props" Condition="Exists('..\packages\LibSassHost.Native.win-x64.1.3.2\build\LibSassHost.Native.win-x64.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0936DB6A-27A3-480F-A85B-EDFF8806B526}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImHungryApplication</RootNamespace>
+    <AssemblyName>ImHungryApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedStringBuilder, Version=0.1.0.0, Culture=neutral, PublicKeyToken=e818a2fc08933ddb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AdvancedStringBuilder.0.1.0\lib\net45\AdvancedStringBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Core, Version=1.10.0.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <HintPath>..\packages\BundleTransformer.Core.1.10.0\lib\net40\BundleTransformer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.SassAndScss, Version=1.12.22.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <HintPath>..\packages\BundleTransformer.SassAndScss.1.12.22\lib\net40\BundleTransformer.SassAndScss.dll</HintPath>
+    </Reference>
+    <Reference Include="LibSassHost, Version=1.3.2.0, Culture=neutral, PublicKeyToken=3e24e88796a38e46, processorArchitecture=MSIL">
+      <HintPath>..\packages\LibSassHost.1.3.2\lib\net471\LibSassHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.0.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dist\assets\fonts\metropolis\SIL Open Font License.txt" />
+    <Content Include="dist\assets\img\app-desktop-demo-screenshot.jpg" />
+    <Content Include="dist\assets\img\app-store-badge.svg" />
+    <Content Include="dist\assets\img\avataaars.svg" />
+    <Content Include="dist\assets\img\brand-logos\dribbble.svg" />
+    <Content Include="dist\assets\img\brand-logos\google.svg" />
+    <Content Include="dist\assets\img\brand-logos\instagram.svg" />
+    <Content Include="dist\assets\img\brand-logos\mailchimp.svg" />
+    <Content Include="dist\assets\img\brand-logos\pinterest.svg" />
+    <Content Include="dist\assets\img\brand-logos\product-hunt.svg" />
+    <Content Include="dist\assets\img\device-mockups\iPadPro\landscape_black.png" />
+    <Content Include="dist\assets\img\device-mockups\iPadPro\landscape_gold.png" />
+    <Content Include="dist\assets\img\device-mockups\iPadPro\landscape_white.png" />
+    <Content Include="dist\assets\img\device-mockups\iPadPro\portrait_black.png" />
+    <Content Include="dist\assets\img\device-mockups\iPadPro\portrait_gold.png" />
+    <Content Include="dist\assets\img\device-mockups\iPadPro\portrait_white.png" />
+    <Content Include="dist\assets\img\device-mockups\iPhoneX\landscape.png" />
+    <Content Include="dist\assets\img\device-mockups\iPhoneX\landscape_black.png" />
+    <Content Include="dist\assets\img\device-mockups\iPhoneX\portrait.png" />
+    <Content Include="dist\assets\img\device-mockups\iPhoneX\portrait_black.png" />
+    <Content Include="dist\assets\img\device-mockups\MacbookPro\portrait_black.png" />
+    <Content Include="dist\assets\img\device-mockups\Macbook\portrait_black.png" />
+    <Content Include="dist\assets\img\device-mockups\Macbook\portrait_gold.png" />
+    <Content Include="dist\assets\img\device-mockups\Macbook\portrait_white.png" />
+    <Content Include="dist\assets\img\drawkit\color\drawkit-content-man-color.svg" />
+    <Content Include="dist\assets\img\drawkit\color\drawkit-social-feed-color.svg" />
+    <Content Include="dist\assets\img\drawkit\color\drawkit-user-mobile-color.svg" />
+    <Content Include="dist\assets\img\favicon.png" />
+    <Content Include="dist\assets\img\google-play-badge.svg" />
+    <Content Include="dist\assets\img\pattern-shapes.png" />
+    <Content Include="dist\assets\img\screenshots\header-basic-signup.jpg" />
+    <Content Include="dist\assets\img\screenshots\header-basic.jpg" />
+    <Content Include="dist\assets\img\screenshots\header-graphic-signup.jpg" />
+    <Content Include="dist\assets\img\screenshots\header-graphic.jpg" />
+    <Content Include="dist\assets\img\screenshots\header-inner-page.jpg" />
+    <Content Include="dist\assets\img\screenshots\header-nav-only.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-agency.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-app-desktop.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-app-mobile.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-classifieds.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-directory.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-lead-capture.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-multipurpose.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-portfolio.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-press.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-real-estate.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-rental.jpg" />
+    <Content Include="dist\assets\img\screenshots\landing-resume.jpg" />
+    <Content Include="dist\assets\video\video.mp4" />
+    <Content Include="dist\css\styles.css" />
+    <Content Include="dist\js\scripts.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <None Include=".bin\git.cmd" />
+    <None Include=".bin\node.cmd" />
+    <None Include=".bin\npm.cmd" />
+    <Content Include="scripts\build-assets.js" />
+    <Content Include="scripts\build-pug.js" />
+    <Content Include="scripts\build-scripts.js" />
+    <Content Include="scripts\build-scss.js" />
+    <Content Include="scripts\clean.js" />
+    <Content Include="scripts\render-assets.js" />
+    <Content Include="scripts\render-pug.js" />
+    <Content Include="scripts\render-scripts.js" />
+    <Content Include="scripts\render-scss.js" />
+    <Content Include="scripts\sb-watch.js" />
+    <Content Include="scripts\start-debug.js" />
+    <Content Include="scripts\start.js" />
+    <Content Include="src\assets\fonts\metropolis\SIL Open Font License.txt" />
+    <Content Include="src\assets\img\app-desktop-demo-screenshot.jpg" />
+    <Content Include="src\assets\img\app-store-badge.svg" />
+    <Content Include="src\assets\img\avataaars.svg" />
+    <Content Include="src\assets\img\brand-logos\dribbble.svg" />
+    <Content Include="src\assets\img\brand-logos\google.svg" />
+    <Content Include="src\assets\img\brand-logos\instagram.svg" />
+    <Content Include="src\assets\img\brand-logos\mailchimp.svg" />
+    <Content Include="src\assets\img\brand-logos\pinterest.svg" />
+    <Content Include="src\assets\img\brand-logos\product-hunt.svg" />
+    <Content Include="src\assets\img\device-mockups\iPadPro\landscape_black.png" />
+    <Content Include="src\assets\img\device-mockups\iPadPro\landscape_gold.png" />
+    <Content Include="src\assets\img\device-mockups\iPadPro\landscape_white.png" />
+    <Content Include="src\assets\img\device-mockups\iPadPro\portrait_black.png" />
+    <Content Include="src\assets\img\device-mockups\iPadPro\portrait_gold.png" />
+    <Content Include="src\assets\img\device-mockups\iPadPro\portrait_white.png" />
+    <Content Include="src\assets\img\device-mockups\iPhoneX\landscape.png" />
+    <Content Include="src\assets\img\device-mockups\iPhoneX\landscape_black.png" />
+    <Content Include="src\assets\img\device-mockups\iPhoneX\portrait.png" />
+    <Content Include="src\assets\img\device-mockups\iPhoneX\portrait_black.png" />
+    <Content Include="src\assets\img\device-mockups\MacbookPro\portrait_black.png" />
+    <Content Include="src\assets\img\device-mockups\Macbook\portrait_black.png" />
+    <Content Include="src\assets\img\device-mockups\Macbook\portrait_gold.png" />
+    <Content Include="src\assets\img\device-mockups\Macbook\portrait_white.png" />
+    <Content Include="src\assets\img\drawkit\color\drawkit-content-man-color.svg" />
+    <Content Include="src\assets\img\drawkit\color\drawkit-social-feed-color.svg" />
+    <Content Include="src\assets\img\drawkit\color\drawkit-user-mobile-color.svg" />
+    <Content Include="src\assets\img\favicon.png" />
+    <Content Include="src\assets\img\google-play-badge.svg" />
+    <Content Include="src\assets\img\pattern-shapes.png" />
+    <Content Include="src\assets\img\screenshots\header-basic-signup.jpg" />
+    <Content Include="src\assets\img\screenshots\header-basic.jpg" />
+    <Content Include="src\assets\img\screenshots\header-graphic-signup.jpg" />
+    <Content Include="src\assets\img\screenshots\header-graphic.jpg" />
+    <Content Include="src\assets\img\screenshots\header-inner-page.jpg" />
+    <Content Include="src\assets\img\screenshots\header-nav-only.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-agency.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-app-desktop.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-app-mobile.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-classifieds.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-directory.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-lead-capture.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-multipurpose.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-portfolio.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-press.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-real-estate.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-rental.jpg" />
+    <Content Include="src\assets\img\screenshots\landing-resume.jpg" />
+    <Content Include="src\assets\video\video.mp4" />
+    <Content Include="src\js\scripts.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="package.json" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-Black.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-BlackItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-Bold.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-BoldItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-ExtraBold.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-ExtraBoldItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-ExtraLight.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-ExtraLightItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-Light.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-LightItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-Medium.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-MediumItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-Regular.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-RegularItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-SemiBold.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-SemiBoldItalic.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-Thin.otf" />
+    <Content Include="src\assets\fonts\metropolis\Metropolis-ThinItalic.otf" />
+    <Content Include="src\assets\img\device-mockups\iPadPro\iPad-Pro-Mockup.psd" />
+    <Content Include="src\assets\img\device-mockups\MacbookPro\MacbookPro.psd" />
+    <Content Include="src\assets\img\device-mockups\Macbook\macbook.psd" />
+    <Content Include="src\pug\layouts\default.pug" />
+    <Content Include="src\pug\layouts\includes\head\css.pug" />
+    <Content Include="src\pug\layouts\includes\head\icons.pug" />
+    <Content Include="src\pug\layouts\includes\head\meta.pug" />
+    <Content Include="src\pug\layouts\includes\head\title.pug" />
+    <Content Include="src\pug\layouts\includes\scripts.pug" />
+    <Content Include="src\pug\pages\header-basic-signup.pug" />
+    <Content Include="src\pug\pages\header-basic.pug" />
+    <Content Include="src\pug\pages\header-graphic-signup.pug" />
+    <Content Include="src\pug\pages\header-graphic.pug" />
+    <Content Include="src\pug\pages\header-inner-page.pug" />
+    <Content Include="src\pug\pages\header-nav-only.pug" />
+    <Content Include="src\pug\pages\index.pug" />
+    <Content Include="src\pug\pages\landing-agency.pug" />
+    <Content Include="src\pug\pages\landing-app-desktop.pug" />
+    <Content Include="src\pug\pages\landing-app-mobile.pug" />
+    <Content Include="src\pug\pages\landing-classifieds.pug" />
+    <Content Include="src\pug\pages\landing-directory.pug" />
+    <Content Include="src\pug\pages\landing-lead-capture.pug" />
+    <Content Include="src\pug\pages\landing-multipurpose.pug" />
+    <Content Include="src\pug\pages\landing-portfolio.pug" />
+    <Content Include="src\pug\pages\landing-press.pug" />
+    <Content Include="src\pug\pages\landing-real-estate.pug" />
+    <Content Include="src\pug\pages\landing-rental.pug" />
+    <Content Include="src\pug\pages\landing-resume.pug" />
+    <Content Include="src\pug\pages\mixins\footer.pug" />
+    <Content Include="src\pug\pages\mixins\header.pug" />
+    <Content Include="src\pug\pages\mixins\includes\border-options.pug" />
+    <Content Include="src\pug\pages\mixins\includes\partials\border-bottom-angled.pug" />
+    <Content Include="src\pug\pages\mixins\includes\partials\border-bottom-rounded.pug" />
+    <Content Include="src\pug\pages\mixins\includes\partials\border-bottom-waves.pug" />
+    <Content Include="src\pug\pages\mixins\navbar.pug" />
+    <Content Include="src\pug\pages\mixins\section.pug" />
+    <Content Include="src\pug\pages\page-basic.pug" />
+    <Content Include="src\pug\pages\page-blog-archive.pug" />
+    <Content Include="src\pug\pages\page-blog-overview.pug" />
+    <Content Include="src\pug\pages\page-blog-post.pug" />
+    <Content Include="src\pug\pages\page-careers-listing.pug" />
+    <Content Include="src\pug\pages\page-careers-overview.pug" />
+    <Content Include="src\pug\pages\page-company-about.pug" />
+    <Content Include="src\pug\pages\page-company-contact.pug" />
+    <Content Include="src\pug\pages\page-company-pricing.pug" />
+    <Content Include="src\pug\pages\page-company-terms.pug" />
+    <Content Include="src\pug\pages\page-help-center.pug" />
+    <Content Include="src\pug\pages\page-help-knowledgebase.pug" />
+    <Content Include="src\pug\pages\page-help-message-center.pug" />
+    <Content Include="src\pug\pages\page-help-support-ticket.pug" />
+    <Content Include="src\pug\pages\page-portfolio-case-study.pug" />
+    <Content Include="src\pug\pages\page-portfolio-grid.pug" />
+    <Content Include="src\pug\pages\page-portfolio-large-grid.pug" />
+    <Content Include="src\pug\pages\page-portfolio-masonry.pug" />
+    <Content Include="src\pug\pages\page-portfolio-project.pug" />
+    <Content Include="css\components\alerts\_icon.scss" />
+    <Content Include="css\components\alerts\_solid.scss" />
+    <Content Include="css\components\buttons\_global.scss" />
+    <Content Include="css\components\buttons\_icon.scss" />
+    <Content Include="css\components\buttons\_marketing.scss" />
+    <Content Include="css\components\buttons\_sizing.scss" />
+    <Content Include="css\components\buttons\_social.scss" />
+    <Content Include="css\components\buttons\_transparent.scss" />
+    <Content Include="css\components\cards\_advanced.scss" />
+    <Content Include="css\components\cards\_collapsable.scss" />
+    <Content Include="css\components\cards\_flags.scss" />
+    <Content Include="css\components\cards\_global.scss" />
+    <Content Include="css\components\cards\_icon.scss" />
+    <Content Include="css\components\cards\_link.scss" />
+    <Content Include="css\components\cards\_portfolio.scss" />
+    <Content Include="css\components\cards\_progress.scss" />
+    <Content Include="css\components\cards\_scrollable.scss" />
+    <Content Include="css\components\dropdowns\_global.scss" />
+    <Content Include="css\components\dropdowns\_mega.scss" />
+    <Content Include="css\components\dropdowns\_notifications.scss" />
+    <Content Include="css\components\dropdowns\_user.scss" />
+    <Content Include="css\components\forms\_checkboxes.scss" />
+    <Content Include="css\components\forms\_form-control.scss" />
+    <Content Include="css\components\navigation\sidenav\_sidenav-dark.scss" />
+    <Content Include="css\components\navigation\sidenav\_sidenav-light.scss" />
+    <Content Include="css\components\navigation\sidenav\_sidenav.scss" />
+    <Content Include="css\components\navigation\_nav-sticky.scss" />
+    <Content Include="css\components\navigation\_navbar-marketing.scss" />
+    <Content Include="css\components\navigation\_navbar.scss" />
+    <Content Include="css\components\navigation\_topnav.scss" />
+    <Content Include="css\components\_accordion.scss" />
+    <Content Include="css\components\_avatars.scss" />
+    <Content Include="css\components\_badges.scss" />
+    <Content Include="css\components\_icons.scss" />
+    <Content Include="css\components\_list-group.scss" />
+    <Content Include="css\components\_media.scss" />
+    <Content Include="css\components\_pagination.scss" />
+    <Content Include="css\components\_video.scss" />
+    <Content Include="css\layout\_default.scss" />
+    <Content Include="css\pages\_error.scss" />
+    <Content Include="css\sections\_blog.scss" />
+    <Content Include="css\sections\_borders.scss" />
+    <Content Include="css\sections\_brands.scss" />
+    <Content Include="css\sections\_device.scss" />
+    <Content Include="css\sections\_footer.scss" />
+    <Content Include="css\sections\_header.scss" />
+    <Content Include="css\sections\_pricing.scss" />
+    <Content Include="css\sections\_testimonials.scss" />
+    <Content Include="css\main.scss" />
+    <Content Include="css\utilities\_animation.scss" />
+    <Content Include="css\utilities\_background.scss" />
+    <Content Include="css\utilities\_border.scss" />
+    <Content Include="css\utilities\_dropdown.scss" />
+    <Content Include="css\utilities\_general.scss" />
+    <Content Include="css\utilities\_images.scss" />
+    <Content Include="css\utilities\_lift.scss" />
+    <Content Include="css\utilities\_shadow.scss" />
+    <Content Include="css\utilities\_text.scss" />
+    <Content Include="css\utilities\_zindex.scss" />
+    <Content Include="css\variables\_alerts.scss" />
+    <Content Include="css\variables\_badges.scss" />
+    <Content Include="css\variables\_body.scss" />
+    <Content Include="css\variables\_buttons-forms.scss" />
+    <Content Include="css\variables\_cards.scss" />
+    <Content Include="css\variables\_code.scss" />
+    <Content Include="css\variables\_colors.scss" />
+    <Content Include="css\variables\_components.scss" />
+    <Content Include="css\variables\_dropdowns.scss" />
+    <Content Include="css\variables\_error.scss" />
+    <Content Include="css\variables\_grid.scss" />
+    <Content Include="css\variables\_navbar.scss" />
+    <Content Include="css\variables\_navigation.scss" />
+    <Content Include="css\variables\_page-header.scss" />
+    <Content Include="css\variables\_spacing.scss" />
+    <Content Include="css\variables\_tables.scss" />
+    <Content Include="css\variables\_typography.scss" />
+    <Content Include="css\_global.scss" />
+    <Content Include="css\_project-global.scss" />
+    <Content Include="css\_variables-colors-overrides.scss" />
+    <Content Include="css\_variables-sb-ui-kit-pro-overrides.scss" />
+    <Content Include="css\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="src\scss\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-Black.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-BlackItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-Bold.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-BoldItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-ExtraBold.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-ExtraBoldItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-ExtraLight.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-ExtraLightItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-Light.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-LightItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-Medium.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-MediumItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-Regular.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-RegularItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-SemiBold.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-SemiBoldItalic.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-Thin.otf" />
+    <Content Include="dist\assets\fonts\metropolis\Metropolis-ThinItalic.otf" />
+    <Content Include="dist\assets\img\device-mockups\iPadPro\iPad-Pro-Mockup.psd" />
+    <Content Include="dist\assets\img\device-mockups\MacbookPro\MacbookPro.psd" />
+    <Content Include="dist\assets\img\device-mockups\Macbook\macbook.psd" />
+    <Content Include="package-lock.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51424</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51726/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\LibSassHost.Native.win-x64.1.3.2\build\LibSassHost.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibSassHost.Native.win-x64.1.3.2\build\LibSassHost.Native.win-x64.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
