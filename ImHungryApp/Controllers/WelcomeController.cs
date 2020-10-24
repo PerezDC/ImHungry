@@ -6,29 +6,28 @@ using System.Web.Mvc;
 
 namespace ImHungryApp.Controllers
 {
-    public class HomeController : Controller
+    public class WelcomeController : Controller
     {
+        // GET: Welcome
         public ActionResult Index()
         {
             return View();
         }
 
-        public ViewResult Login()
-        {
-            return View();
-        }
-        
-        public ViewResult ResetPassword()
-        {
-            return View();
-        }
-        
-        public ViewResult ResetPasswordSent()
+        // GET: Welcome/Search
+        public ActionResult Search()
         {
             return View();
         }
 
-        public ViewResult About()
+        // GET: Welcome/Reveal
+        public ActionResult Reveal()
+        {
+            return View();
+        }
+
+        // GET: Welcome/Results
+        public ActionResult Results()
         {
             return View();
         }

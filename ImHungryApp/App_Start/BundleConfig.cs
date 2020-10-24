@@ -9,6 +9,9 @@ namespace ImHungryApp
         {
             bundles.Add(new StyleBundle("~/bundles/sass").Include(
                       "~/dist/css/styles.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/start").Include(
+                "~/dist/"));
         }
     }
 }

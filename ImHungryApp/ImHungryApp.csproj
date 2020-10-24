@@ -137,6 +137,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewUserController.cs" />
+    <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -461,6 +463,11 @@
     <Content Include="src\scss\_variables-colors-overrides.scss" />
     <Content Include="src\scss\_variables-sb-ui-kit-pro-overrides.scss" />
     <Content Include="src\scss\_variables.scss" />
+    <Content Include="Views\NewUser\Index.cshtml" />
+    <Content Include="Views\Welcome\Index.cshtml" />
+    <Content Include="Views\Welcome\Search.cshtml" />
+    <Content Include="Views\Welcome\Reveal.cshtml" />
+    <Content Include="Views\Welcome\Results.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
