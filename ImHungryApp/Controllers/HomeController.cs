@@ -13,17 +13,18 @@ namespace ImHungryApp.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ViewResult Login()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
-
-        public ActionResult Contact()
+        
+        public ViewResult ResetPassword()
         {
-            ViewBag.Message = "Your contact page.";
-
+            return View();
+        }
+        
+        public ViewResult ResetPasswordSent()
+        {
             return View();
         }
     }
