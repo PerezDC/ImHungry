@@ -198,6 +198,11 @@
     <Content Include="dist\js\scripts.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ImgContainer\PNGs\maletechnologist.png" />
+    <Content Include="ImgContainer\PNGs\okhandsign.png" />
+    <Content Include="ImgContainer\PNGs\pizzaslice.png" />
+    <Content Include="ImgContainer\PNGs\steamingbowl.png" />
+    <Content Include="ImgContainer\PNGs\wavinghandsign.png" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="scripts\build-assets.js" />
@@ -308,6 +313,7 @@
     <None Include=".bin\git.cmd" />
     <None Include=".bin\node.cmd" />
     <None Include=".bin\npm.cmd" />
+    <Content Include="ImgContainer\.DS_Store" />
     <None Include="packages.config" />
     <Content Include="src\assets\fonts\metropolis\Metropolis-Black.otf" />
     <Content Include="src\assets\fonts\metropolis\Metropolis-BlackItalic.otf" />
