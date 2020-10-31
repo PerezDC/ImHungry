@@ -203,11 +203,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ImgContainer\IMGs\IMG_0779.JPG" />
+    <Content Include="ImgContainer\PNGs\crystalball.png" />
     <Content Include="ImgContainer\PNGs\ImHungry.png" />
     <Content Include="ImgContainer\PNGs\maletechnologist.png" />
     <Content Include="ImgContainer\PNGs\okhandsign.png" />
     <Content Include="ImgContainer\PNGs\pizzaslice.png" />
     <Content Include="ImgContainer\PNGs\steamingbowl.png" />
+    <Content Include="ImgContainer\PNGs\thumbsdown.png" />
+    <Content Include="ImgContainer\PNGs\thumbsup.png" />
     <Content Include="ImgContainer\PNGs\wavinghandsign.png" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
