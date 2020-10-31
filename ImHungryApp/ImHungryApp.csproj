@@ -145,6 +145,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appsettings.Development.json" />
+    <Content Include="appsettings.json" />
     <Content Include="dist\assets\fonts\metropolis\SIL Open Font License.txt" />
     <Content Include="dist\assets\img\app-desktop-demo-screenshot.jpg" />
     <Content Include="dist\assets\img\app-store-badge.svg" />
@@ -194,10 +196,14 @@
     <Content Include="dist\assets\img\screenshots\landing-rental.jpg" />
     <Content Include="dist\assets\img\screenshots\landing-resume.jpg" />
     <Content Include="dist\assets\video\video.mp4" />
+    <Content Include="dist\css\slider.css" />
     <Content Include="dist\css\styles.css" />
     <Content Include="dist\js\scripts.js" />
+    <Content Include="dist\js\slider.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ImgContainer\IMGs\IMG_0779.JPG" />
+    <Content Include="ImgContainer\PNGs\ImHungry.png" />
     <Content Include="ImgContainer\PNGs\maletechnologist.png" />
     <Content Include="ImgContainer\PNGs\okhandsign.png" />
     <Content Include="ImgContainer\PNGs\pizzaslice.png" />
