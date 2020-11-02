@@ -83,7 +83,7 @@ ID | Use Case
 ## Requirements List
 [Back to Table of Contents ↑](#Table-of-contents)
 ID | Requirement | Test Method | Test ID | Tested
----|:------------|:------------|:--------|:-------
+:---|:------------|:------------|:--------|:-------|
 1.|System shall allow registered users to log in. | Inpection | T1 | Yes
 1.1.|System shall allow registered users to input username and password. | Test | T2 | Yes
 1.2.|System shall validate login credentials in database. | Test | T3 | No
@@ -113,7 +113,7 @@ ID | Requirement | Test Method | Test ID | Tested
 ## Test Table
 [Back to Table of Contents ↑](#Table-of-contents)
 Test ID | Req ID | Test Procedure | Current Status
-:-------|:-------|:---------------|:---------------|:----------
+:-------|:-------|:---------------|:---------------|:----------|
 T1 | 1 | Check Log In button. Input form should be displayed. | Tested
 T2 | 1.1 | Check if Register Now link displays input form. | Tested
 T3 | 1.2, 3.2 | Check input form constraints, username and email address in correct formats. | Tested
