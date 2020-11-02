@@ -136,6 +136,10 @@ T19 | 8.1 | Check to see if the provided result was random. | Not Tested | N/A
 T20 | 8.2 | Users should be able to receive another random result if Try Again button is clicked. | Not Tested | N/A
 T21 | 8.3 | Registered users will have their last result saved to their database. | Not Tested | N/A
 
+### What percent of requirements are (currently) covered by test cases?
+### What percent of test cases are currently passing?
+### What level of Validation could be expected after Verification? (Acceptance Tests?)
+
 ---
 ## Prototype
 [Back to Table of Contents ↑](#Table-of-contents)
