@@ -113,7 +113,7 @@ ID | Requirement | Test Method | Test ID | Tested
 ## Test Table
 [Back to Table of Contents ↑](#Table-of-contents)
 Test ID | Req ID | Test Procedure | Current Status
-:-------|:-------|:---------------|:---------------|:----------|
+:-------|:-------|:---------------|:---------------|
 T1 | 1 | Check Log In button. Input form should be displayed. | Tested
 T2 | 1.1 | Check if Register Now link displays input form. | Tested
 T3 | 1.2, 3.2 | Check input form constraints, username and email address in correct formats. | Tested
