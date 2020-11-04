@@ -9,6 +9,6 @@ namespace ImHungry.Models
         public int CategoryId { get; set; }
 
         public virtual RestaurantCategories Category { get; set; }
-        public virtual RegUser User { get; set; }
+        public virtual NewUser User { get; set; }
     }
 }

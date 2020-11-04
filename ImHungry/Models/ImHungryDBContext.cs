@@ -16,7 +16,7 @@ namespace ImHungry.Models
         }
 
         public virtual DbSet<PrefCategories> PrefCategories { get; set; }
-        public virtual DbSet<RegUser> RegUser { get; set; }
+        public virtual DbSet<NewUser> RegUser { get; set; }
         public virtual DbSet<RestaurantCategories> RestaurantCategories { get; set; }
         public virtual DbSet<Restaurants> Restaurants { get; set; }
         public virtual DbSet<VisitedRestaurant> VisitedRestaurant { get; set; }
@@ -53,25 +53,17 @@ namespace ImHungry.Models
                     .HasConstraintName("FK_PrefCategories_User");
             });
 
-            modelBuilder.Entity<RegUser>(entity =>
+            modelBuilder.Entity<NewUser>(entity =>
             {
                 entity.HasKey(e => e.UserId);
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
 
-                entity.Property(e => e.EmailAddress)
-                    .IsRequired()
-                    .HasMaxLength(80);
+                entity.Property(e => e.UserEmail).HasMaxLength(80);
 
-                entity.Property(e => e.FirstName)
-                    .IsRequired()
-                    .HasMaxLength(40);
+                entity.Property(e => e.UserPassword).HasMaxLength(40);
 
-                entity.Property(e => e.LastName)
-                    .IsRequired()
-                    .HasMaxLength(40);
-
-                entity.Property(e => e.UserPassword)
+                entity.Property(e => e.Username)
                     .IsRequired()
                     .HasMaxLength(80);
             });

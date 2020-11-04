@@ -10,6 +10,6 @@ namespace ImHungry.Models
         public bool UserLiked { get; set; }
 
         public virtual Restaurants Rest { get; set; }
-        public virtual RegUser User { get; set; }
+        public virtual NewUser User { get; set; }
     }
 }

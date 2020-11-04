@@ -1,0 +1,129 @@
+﻿@model ImHungry.Models.ViewModels.NewUserViewModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <meta name="description" content="I'm Hungry - web application for hungry people. Don't know what to eat? Let us pick a restaurant for you!" />
+
+    <meta name="author" content="David Perez" />
+
+    <title>I'm Hungry</title>
+
+</head>
+
+<body>
+
+    <div id="layoutDefault">
+
+        <div id="layoutDefault_content">
+
+            <main>
+                <header class="page-header page-header-dark bg-gradient-primary-to-secondary">
+
+                    <div class="page-header-content pt-15">
+
+                        <div class="container">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+
+                                    <h1 class="page-header-title"> Hello hungry person</h1>
+
+                                    <hr class="my-3" color="#FFFFFF" />
+
+                                    <form method="post">
+
+                                        <div asp-validation-summary="All" class="text-danger"></div>
+                                        <div class="form-group">
+
+                                            <div class="form-group mr-0 mr-lg-2">
+                                                <input asp-for="Email" class="form-control form-control-solid rounded-pill" type="email" placeholder="Enter an email address.."/>
+                                                <span asp-validation-for="Email" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="form-group mr-0 mr-lg-2">
+                                                <input asp-for="Password" class="form-control form-control-solid rounded-pill" type="password" placeholder="Create a password.." />
+                                                <span asp-validation-for="Password" class="text-danger"></span>
+                                            </div>
+                                            
+                                            <div class="form-group mr-0 mr-lg-2">
+                                                <input asp-for="ConfirmPassword" class="form-control form-control-solid rounded-pill" type="password" placeholder="Confirm password.." />
+                                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-white btn-marketing rounded-pill lift lift-sm">Sign Up<i class="fas fa-arrow-right ml-1"></i></button>
+                                            <a class="btn btn-yellow btn-marketing rounded-pill lift lift-sm" href="../HOME">Cancel<i class="fas fa-arrow-right ml-1"></i></a>
+
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up"><img class="img-fluid" src="~/assets/PNGs/wavinghandsign.png" /></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="svg-border-rounded text-white">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+
+                    </div>
+
+                </header>
+            </main>
+
+        </div>
+
+        <div id="layoutDefault_footer">
+
+            <footer class="footer pt-10 pb-5 mt-auto bg-white footer-light">
+
+                <div class="container">
+                    <hr class="my-5" />
+
+                    <div class="row align-items-center">
+
+                        <div class="col-md-6 small">Copyright &copy; David Perez 2020</div>
+
+                        <div class="col-md-6 text-md-right small">
+
+                            <a href="javascript:void(0);">Privacy Policy</a>
+
+                            &middot;
+
+                            <a href="javascript:void(0);">Terms &amp; Conditions</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

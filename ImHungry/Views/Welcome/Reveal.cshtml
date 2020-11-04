@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title += "Home Page";
+﻿
+@{
+    ViewBag.Title = "Reveal";
 }
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@
 
     <meta name="author" content="David Perez" />
 
-    <title>I'm Hungry</title>
+    <title>I'm Hungry - Drum roll..</title>
 
 </head>
 
@@ -33,23 +34,27 @@
 
                     <div class="page-header-content pt-15">
 
-                        <div class="container">
+                        <div class="container justify-content-center">
 
-                            <div class="row align-items-center">
+                            <div class="row justify-content-center" data-aos="fade-up">
 
-                                <div class="col-lg-6" data-aos="fade-up">
+                                <img src="~/assets/PNGs/crystalball.png" alt="crystal ball" class="img-fluid" />
+                            </div>
 
-                                    <h1 class="page-header-title">Hungry?</h1>
+                            <br>
 
-                                    <p class="page-header-text mb-5">Login to get started<br>or continue as a guest<br>or sign up</p>
+                            <div class="row justify-content-center">
 
-                                    <a class="btn btn-white btn-marketing rounded-pill lift lift-sm" href="/Account/Login">Log In<i class="fas fa-arrow-right ml-1"></i></a>
-                                    <a class="btn btn-white btn-marketing rounded-pill lift lift-sm" href="landing-multipurpose.html">Continue as Guest<i class="fas fa-arrow-right ml-1"></i></a>
-                                    <a class="btn btn-link btn-marketing" href="/Account/Register">Sign Up Here&nbsp;</a>
+                                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+
+                                    <div class="row justify-content-center"><h1 class="page-header-title">Drum roll..</h1></div>
+
+                                    <br>
+
+                                    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100"><a class="btn btn-white btn-marketing rounded-pill lift lift-sm" href="../HOME/landing-multipurpose.html">Reveal My Results<i class="fas fa-arrow-right ml-1"></i></a></div>
 
                                 </div>
 
-                                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="50"><img class="img-fluid" src="~/assets/PNGs/pizzaslice.png" /></div>
 
                             </div>
 
@@ -73,7 +78,6 @@
             <footer class="footer pt-10 pb-5 mt-auto bg-white footer-light">
 
                 <div class="container">
-                    <hr class="my-5" />
 
                     <div class="row align-items-center">
 
