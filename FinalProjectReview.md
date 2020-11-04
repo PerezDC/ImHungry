@@ -167,15 +167,15 @@ Test ID | Req ID | Test Procedure | Current Status
 T1 | 1 | Check Log In button. Input form should be displayed. | Tested
 T2 | 1.1 | Check if Register Now link displays input form. | Tested
 T3 | 1.2, 3.2 | Check input form constraints, username and email address in correct formats. | Tested
-T4 | 1.3 | Check if logged in user or newly registered user is forwarded to Welcome Page. | Not Tested
+T4 | 1.3 | Check if logged in user or newly registered user is forwarded to Welcome Page. | Tested
 T5 | 2, 2.1 | Check Continue as Guest button, users should be forwarded to Search Page. | Not Tested
-T6 | 3 | Check if new user form populated user database. | Not Tested
-T7 | 3.1, 3.2 | Check new user input form constraints, inputted data should adhere to formatting. | Not Tested
+T6 | 3 | Check if new user form populated user database. | Tested
+T7 | 3.1, 3.2 | Check new user input form constraints, inputted data should adhere to formatting. | Tested
 T8 | 3.3 | Check if newly registered users are forwarded to Welcome Page with intro walk-through. | Not Tested
 T9 | 4, 1.3, 8.3 | Revisiting users should be able to rate their last visited establishment. | Not Tested
 T10 | 5, 5.1 | Check if Use My Location button fetches device's geolocation. | Not Tested
 T11 | 5, 5.2 | Check if input form displays if Search By Zip button is clicked. | Not Tested
-T12 | 5.2.1 | Check if the input form only accepts int value of 5 (i.e. 92592). | Not Tested
+T12 | 5.2.1 | Check if the input form only accepts int 5 digits long (i.e. 12345). | Not Tested
 T13 | 5.3 | Users should be forwarded to the Results Page | Not Tested
 T14 | 6 | Users should be able to adjust search radius from .5 miles to 25 miles using a slider. | Not Tested
 T15 | 7 | Check if query is properly formatted for Yelp!'s REST API. | Not Tested
@@ -187,8 +187,13 @@ T20 | 8.2 | Users should be able to receive another random result if Try Again b
 T21 | 8.3 | Registered users will have their last result saved to their database. | Not Tested
 
 ### What percent of requirements are (currently) covered by test cases?
+All of my requirements (100%) have a test associated with them.
+
 ### What percent of test cases are currently passing?
+30% of test cases are currently passes, the remaining 70% of test cases rely primarily on the implementation of upcoming developments.
+
 ### What level of Validation could be expected after Verification? (Acceptance Tests?)
+Once the application is completely developed, validation would include users being able to login to the application and be routed to the welcome page, where they would rate their previous result. Then the user or guests would be able to move forward to the search page followed by the results page.
 
 ---
 ## Prototype
